@@ -103,7 +103,7 @@
               <av:PointCollection x:Key="ConnectorLocation">330,70 360,70 360,70.44 380,70.44</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Download PDF's Attached" sap:VirtualizedContainerService.HintSize="478.666666666667,640.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Download PDF's Attached" sap:VirtualizedContainerService.HintSize="454.666666666667,470" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="MailMessages" />
             </Sequence.Variables>
@@ -112,19 +112,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,192.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetOutlookMailMessages Filter="{x:Null}" TimeoutMS="{x:Null}" Account="ranjan.c.kumar@capgemini.com" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="True" Messages="[MailMessages]" OnlyUnreadMessages="True" Top="30" />
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="436.666666666667,316" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[MailMessages]">
+            <ui:GetOutlookMailMessages Filter="{x:Null}" TimeoutMS="{x:Null}" Account="ranjan.c.kumar@capgemini.com" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="412.666666666667,22" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="True" Messages="[MailMessages]" OnlyUnreadMessages="True" Top="30" />
+            <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="412.666666666667,316" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[MailMessages]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="snm:MailMessage">
                   <ActivityAction.Argument>
